@@ -1,4 +1,6 @@
+"use client";
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import Wrapper from "./Wrapper";
 
 import Link from "next/link";
@@ -56,7 +58,7 @@ const Header = () => {
         >
             <Wrapper className="h-[60px] flex justify-between items-center">
                 <Link href="/">
-                    <img src="/logo.svg" className="w-[40px] md:w-[60px]" />
+                    <Image src="/logo.svg" className="w-[40px] md:w-[60px]" alt="Logo" width={60} height={60} />
                 </Link>
 
                 <Menu

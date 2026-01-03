@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import Image from "next/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 
@@ -13,10 +15,12 @@ const ProductDetailsCarousel = ({ images }) => {
                 className="productCarousel"
             >
                 {images?.map((img) => (
-                    <img
+                    <Image
                         key={img.id}
                         src={img.attributes.url}
                         alt={img.attributes.name}
+                        width={900}
+                        height={900}
                     />
                 ))}
                 {/* <img src="/p2.png" />
